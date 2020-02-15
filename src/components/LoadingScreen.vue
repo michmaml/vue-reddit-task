@@ -29,7 +29,7 @@ html {
 }
 
 .fadeout {
-  animation: fadeout 1.2s forwards;
+  animation: fadeout 0.4s forwards;
 }
 
 @keyframes fadeout {

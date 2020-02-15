@@ -2,6 +2,10 @@
   <div class="search">
     <div class="header-panel">
       <p>Type In Your Search Term</p>
+
+      <!--    Input field, collects the current state and sends the content
+      whenever it changes. This way, I get instant search-->
+
       <form>
         <input type="text" placeholder=" Type here..." @input="phrasePassed" />
       </form>
@@ -12,8 +16,13 @@
 <script>
 export default {
   name: "Header",
+
+  // receive the list of posts
+
   props: ["posts"],
   methods: {
+    // send the value attached to phrase-search, Home.vue will get it and extract it
+
     phrasePassed(evt) {
       this.$emit("phrase-search", evt.target.value);
     }

@@ -2,15 +2,24 @@
   <div class="post-item" data-aos="fade-up">
     <div class="wrapper">
       <div class="post-image" style="float:left">
+        <!--    Display the thumbnail attached to the object    -->
+
         <img class="image-attached" v-bind:src="post.data.thumbnail" />
       </div>
       <div class="post-rest" style="float:right">
+        <!--    Display the title of the the object    -->
+
         <div class="post-text">{{post.data.title}}</div>
         <div class="post-actions">
           <div class="btn-container">
+            <!--    Enable the button with a link to the original post    -->
+
             <a v-bind:href="getLink()" target="_blank">
               <button class="btn-link">Original Post</button>
             </a>
+
+            <!--    Get the index of the post and initialize sendIndex(...)   -->
+
             <button class="btn-remove" @click="sendIndex(index)">Remove</button>
           </div>
         </div>
@@ -22,11 +31,21 @@
 <script>
 export default {
   name: "PostItem",
-  props: ["post", "index", "id"],
+
+  // extract each post and its index
+
+  props: ["post", "index"],
   methods: {
+    // allows the button to get the correct link to the post
+
     getLink() {
+      //returns alink to the post, there is a pattern: firstly the base url is the same
+      //but each post have unique reference
       return `https://www.reddit.com/${this.post.data.permalink}`;
     },
+
+    // send the value attached to remove-post, Home.vue will get it and extract it
+
     sendIndex(index) {
       this.$emit("remove-post", index);
     }
