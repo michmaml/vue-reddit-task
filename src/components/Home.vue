@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <div class="sign">MJS 2020</div>
     <Header v-on:phrase-search="passPhrase" />
     <LoadingScreen :isLoading="isLoading" />
     <div v-if="!isLoading">
@@ -11,7 +12,6 @@
           v-on:remove-post="removePost"
         />
       </div>
-      <footer>MJS 2020</footer>
     </div>
   </div>
 </template>
@@ -19,9 +19,9 @@
 <script>
 import axios from "axios";
 import LoadingScreen from "./LoadingScreen";
-
-import Header from "./Header";
 import PostItem from "./PostItem";
+
+import Header from "./elements/Header";
 
 export default {
   name: "Home",
@@ -84,9 +84,8 @@ body {
   background-color: #f5f5f5;
 }
 
-footer {
-  padding: 1%;
-  background-color: rgb(77, 100, 102);
-  color: rgb(255, 255, 255);
+.sign {
+  text-align: right;
+  padding: 0.5vh;
 }
 </style>

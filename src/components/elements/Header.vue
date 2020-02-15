@@ -24,7 +24,7 @@ export default {
 <style scoped>
 .header-panel {
   text-align: center;
-  margin: 1% 15%;
+  margin: 0 15% 1% 15%;
   border-radius: 5px;
   border: 0.5em solid rgb(183, 216, 214);
   box-shadow: 20px 5px 35px 0px rgb(77, 100, 102);

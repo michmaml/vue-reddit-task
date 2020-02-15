@@ -68,7 +68,8 @@ export default {
 
 img {
   overflow: hidden;
-  width: auto;
+  width: 152px;
+  height: 152px;
 }
 
 .post-text {
@@ -167,6 +168,11 @@ button:active:before {
 @media screen and (max-width: 1080px) {
   .post-image {
     padding: 2.5% 0;
+  }
+
+  img {
+    width: 140px;
+    height: 140px;
   }
 
   button {
