@@ -15,11 +15,6 @@ html {
 }
 
 .loader {
-  /* color: black;
-  font-size: 32px;
-  width: 100%;
-  text-align: center;
-  position: fixed; */
   color: black;
   display: block;
   font-size: 32px;
@@ -34,7 +29,7 @@ html {
 }
 
 .fadeout {
-  animation: fadeout 1.5s forwards;
+  animation: fadeout 1.2s forwards;
 }
 
 @keyframes fadeout {

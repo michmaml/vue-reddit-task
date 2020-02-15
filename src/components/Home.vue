@@ -2,7 +2,7 @@
   <div id="app">
     <Header v-on:phrase-search="passPhrase" />
     <LoadingScreen :isLoading="isLoading" />
-    <main v-if="!isLoading">
+    <div v-if="!isLoading">
       <div v-for="(post, index) in filteredPosts" v-bind:key="post.id">
         <PostItem
           v-bind:post="post"
@@ -12,7 +12,7 @@
         />
       </div>
       <footer>MJS 2020</footer>
-    </main>
+    </div>
   </div>
 </template>
 
